@@ -17,6 +17,8 @@ namespace protobuf {
 namespace compiler {
 namespace rust {
 
+bool IsSupportedField(Context& ctx, const FieldDescriptor& field);
+
 // Generates the Rust accessors: expected to be called once each for each
 // Message, MessageMut and MessageView's impl.
 void GenerateAccessorMsgImpl(Context& ctx, const FieldDescriptor& field,
